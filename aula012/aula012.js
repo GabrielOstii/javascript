@@ -23,3 +23,39 @@ if (notaFinal2 >=7 ) {
 
 /*IF TERNARIO*/
 
+//notaFinal3 >= 7 ? sit3.textContent = 'Passou' : 'Ficou'
+
+/* IF ENCADEADO OU ANINHADO */
+
+if (notaFinal3 >= 7 ) {
+    sit1.textContent = 'Aprovado'
+} else if (notaFinal1 <= 3) {
+    sit1.textContent = 'Reprovado'
+} else {
+    sit1.textContent = 'Recuperação'
+}
+
+/* Escolha Caso */
+
+let situacao = ''
+//situacao = 'Aprovado'
+//situacao = 'Reprovado'
+//situacao = 'Recupecação'
+
+switch(situacao) {
+    case 'Aprovado':
+        escolha.textContent = 'Passou de ano'
+        break
+    
+    case 'Reprovado' :
+        escolha.textContent = 'Não passou de ano'
+        break
+    
+    case 'Recuperação' :
+        escolha.textContent ='Ainda tem uma chance'
+        break
+
+    default:
+        escolha.textContent = 'Estude'
+        //default não precisa do break
+}
