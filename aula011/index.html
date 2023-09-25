@@ -5,7 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
+
+<!-- onscroll="rolouPagina()" -->
+<!-- Veja a documentação dos Eventos no HTML DOM-->
+<body onload="carregou()" onscroll="rolouPagina()">
+    <main class="tela-principal">
+        <h1 id="titulo" onmouseover="focou()" >Aula 11</h1>
+        <section class="conteudo">
+            <article class="box">
+            </article>
+            <article class="box">
+            </article>
+        <button id="btn1" class="botao">Box1</button>
+        <button id="btn2" class="botao">Box2</button>
+        </section>
+            <hr />
+        <form action="">
+            <input  id="cxtexto"
+                    type="text"
+                    placeholder="Digite seu nome"
+                    onfocus="focoNoCampo()"
+                    onfocusout="semFocoNoCampo()"
+                    onkeypress="avisarQueTeclou()"
+            >
+            <button id="btn3" class="botao" type="submit">Enviar</button>
+        </form>
+    </main>
     <script src="aula011.js"></script>
 </body>
 </html>
