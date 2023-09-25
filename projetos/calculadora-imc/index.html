@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto Calculadora IMC</title>
+</head>
+<body>
+    <main>
+        <h1>Calculadora de IMC</h1>
+        <form action="" method="post" id="formulario" autocomplete="off">
+            <div class="form-group">
+                <label for="inome">Nome</label>
+                <input 
+                    type="text" 
+                    name="nome" 
+                    id="inome"
+                    class="input"
+                    autofocus
+                    required>
+            </div>
+            <div class="form-group">
+                <label for="iidade">Idade</label>
+                <input 
+                    type="number" 
+                    name="idade" 
+                    id="iidade"
+                    class="input"
+                    min="0"
+                    max="130"
+                    required>
+            </div>
+            <div class="form-group">
+                <label for="ipeso">Peso</label>
+                <input 
+                    type="number" 
+                    name="peso" 
+                    id="ipeso"
+                    class="input"
+                    step="0.01"
+                    min="0.0"
+                    max="500.0"
+                    required>
+            </div>
+            <div class="form-group">
+                <label for="ialtura">Altura</label>
+                <input 
+                    type="number" 
+                    name="altura" 
+                    id="ialtura"
+                    class="input"
+                    step="0.01"
+                    min="0.0"
+                    max="2.70"
+                    required>
+            </div>
+            <div class="form-group">
+                <input 
+                    type="submit"
+                    class="botao"
+                    id="btnEnviar" 
+                    value="Enviar">
+                <input 
+                    type="reset"
+                    class="botao"
+                    id="btnLimpar"
+                    value="Limpar">
+            </div>
+            <div class="form-group">
+                <label for="iimc">IMC</label>
+                <input 
+                    type="text" 
+                    name="imc" 
+                    id="iimc"
+                    value="0.0"
+                    disabled>
+                <span id="aviso"></span>
+            </div>
+        </form>
+        <div>
+            <h2 id="id" class="pessoa">IMC</h2>
+            <p id="nome" class="pessoa"></p>
+            <p id="idade" class="pessoa"></p>
+            <p id="peso" class="pessoa"></p>
+            <p id="altura" class="pessoa"></p>
+            <p id="imc" class="pessoa"></p>
+        </div>
+    </main>
+</body>
+</html>
