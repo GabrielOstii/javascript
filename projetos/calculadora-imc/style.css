@@ -35,6 +35,11 @@ section {
 }
 
 /*Classe JS Faltando*/
+.alerta {
+    background: #f44336;
+    padding: 5px;
+    border-radius: 5px;
+}
 
 /*Forms*/
 

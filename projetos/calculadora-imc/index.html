@@ -9,7 +9,7 @@
 <body>
     <main>
         <h1 id="titulo">Calculadora de IMC</h1>
-        <form action="" method="post" id="formulario" autocomplete="off">
+        <form action="" method="post" id="formulario" autocomplete="on">
             <div class="form-group">
                 <label for="inome">Nome</label>
                 <input 
@@ -17,6 +17,7 @@
                     name="nome" 
                     id="inome"
                     class="input"
+                    autocomplete="name"
                     autofocus
                     required>
             </div>
@@ -87,5 +88,6 @@
             <p id="imc" class="pessoa"></p>
         </div>
     </main>
+<script src="calculadora.js"></script>
 </body>
 </html>
