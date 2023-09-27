@@ -38,6 +38,7 @@ section {
     background: #f44336;
     padding: 5px;
     border-radius: 5px;
+    text-align: center;
 }
 
 /* Formulario */
@@ -63,6 +64,18 @@ input[type=number], input[type=text] {
 #iSituacao {
     font-weight: bold;
     font-size: 1rem;
+}
+
+.aprovado {
+    background: #64dd17;
+}
+
+.reprovado {
+    background: #f44336;
+}
+
+.recuperacao {
+    background: #ffc107;
 }
 
 .cx, input[type=text] {
