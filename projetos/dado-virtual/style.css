@@ -1,0 +1,102 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Roboto', Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background: #ececec;
+}
+
+main {
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+}
+
+section {
+    width: 100%;
+    margin: 0 auto;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.centro {
+    margin-top: 0.625rem;
+    text-align: center;
+}
+
+#imgDado {
+    width: 200px;
+}
+
+#btnSortear {
+    padding: 5px;
+    border: 0px;
+    border-radius: 5px;
+    background: #673ab7;
+    color: #fff;
+    cursor: pointer;
+}
+
+#btnSortear:hover {
+    box-shadow: 1px 1px 5px blueviolet;
+}
+
+#sorteado {
+    background: #311b92;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 50%;
+    margin-bottom: 0.5rem;
+}
+
+@keyframes mover {
+    0% {
+        transform: translateY(0px); /*mover no eixo Y vertical*/
+        transform: rotate(45deg); /*rotacionar 90 graus*/
+        opacity: 0; /* 100% transparente */
+    }
+
+    50% {
+        transform: scale(50%); 
+    }
+
+    100% {
+        transform: translateY(-15px);
+        transform: rotate(-45deg);
+        opacity: 1; /* 0% transparente */
+    }
+}
+
+@keyframes aparecer {
+    to {
+        opacity: 0; /* 100% transparente */
+    }
+    from {
+        opacity: 1; /* 0% transparente */
+    }
+}
+
+.animar {
+    animation: mover 0.5s infinite alternate;
+}
+
+.aparecer {
+    animation: aparecer 1.5s ease-in;
+}
