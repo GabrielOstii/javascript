@@ -37,7 +37,7 @@
             <button
                 id="btnSom"
                 class="botao"
-                onclick="ativerDesativarMusica()"
+                onclick="ativarDesativarMusica()"
                 >
                 &#9835
             </button>
@@ -45,8 +45,9 @@
         <p class="centro" id="aviso"></p>
     </main>
 
-    <audio preload
-        src="./som/abertura-the-mentalist.mp3" type="audio/mpeg">
+    <audio preload autoplay loop
+        src="./som/abertura-the-mentalist.mp3" type="audio/mpeg"
+        id="musicaDeFundo">
     </audio>
     <script src="adivinhacao.js"></script>
 </body>
