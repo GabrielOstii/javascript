@@ -45,7 +45,7 @@
                             max="100"
                             step="0.01"
                             value="0.00"
-                            onchange="atualizaC(); atualizaF(); atualizaK()"
+                            onchange="atualizaCC(); atualizaCF(); atualizaCK()"
                             autofocus
                             >
                         <span id="maxC">100.00</span>
@@ -72,7 +72,8 @@
                             min="-459.40"
                             max="212"
                             step="0.01"
-                            value="32.00">
+                            value="32.00"
+                            onchange="atualizaFF(); atualizaFC(); atualizaFK()">
                         <span id="maxF">212.00</span>
                     </div>
                 </div>
@@ -95,11 +96,12 @@
                         <input
                             type="range"
                             name="kelvin"
-                            id=""
+                            id="kelvin"
                             min="0"
                             max="373"
                             step="0.01"
                             value="273"
+                            onchange="atualizaKK(); atualizaKC(); atualizaKF()"
                             >
                         <span id="maxK">373.00</span>
                     </div>
