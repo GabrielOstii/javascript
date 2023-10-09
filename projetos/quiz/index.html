@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <header>
+            <h1>Osti Quiz</h1>
+        </header>
+
+        <article id="instrucoes">
+            <p>Leia a questão e clique na resposta correta</p>
+        </article>
+        <article class="questoes">
+            <div>
+                <span id="numQuestao"></span>
+                <h2 id="pergunta"></h2>
+            </div>
+            <div class="corpo">
+                <ol type="A" id="alternaivas">
+                    <li 
+                        id="a" 
+                        value="1A" 
+                        class="respostas" 
+                        onclick="verificarSeAcertou(this, this)">
+                    </li>
+                    <li 
+                        id="b" 
+                        value="1B" 
+                        class="respostas" 
+                        onclick="verificarSeAcertou(this, this)">
+                    </li>
+                    <li 
+                        id="c" 
+                        value="1C" 
+                        class="respostas" 
+                        onclick="verificarSeAcertou(this, this)">
+                    </li>
+                </ol>
+            </div>
+        </article>
+        <div>
+            <p id="aviso"> Questão <span id="numero"></span> de <span id="total"></span></p>
+        </div>
+
+        <footer>
+            <p>Desenvolvido por Gabriel Carlos Osti Silva &copy; 2023</p>
+        </footer>
+
+    </main>
+</body>
+</html>
