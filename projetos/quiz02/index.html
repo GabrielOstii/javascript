@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz 2.0</title>
+    <link rel="shortcut icon" href="../favicon/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="centro">
+    <main class="centro">
+        <header>
+            <h1>Osti Quiz</h1>
+        </header>
+
+        <article id="instrucoes" class="centro">
+            <p>Leia a questão e clique na resposta correta</p>
+        </article>
+        <article class="questoes">
+            <div>
+                <span id="numQuestao"></span>
+                <h2 id="pergunta"></h2>
+            </div>
+            <div class="corpo">
+                <ol type="A" id="alternativas">
+                    <li 
+                        id="a" 
+                        value="1A" 
+                        class="respostas" 
+                        onclick="verificarSeAcertou(this, this)">
+                    </li>
+                    <li 
+                        id="b" 
+                        value="1B" 
+                        class="respostas" 
+                        onclick="verificarSeAcertou(this, this)">
+                    </li>
+                    <li 
+                        id="c" 
+                        value="1C" 
+                        class="respostas" 
+                        onclick="verificarSeAcertou(this, this)">
+                    </li>
+                    <li 
+                        id="d" 
+                        value="1D" 
+                        class="respostas" 
+                        onclick="verificarSeAcertou(this, this)">
+                    </li>
+                </ol>
+            </div>
+        </article>
+        <article id="aviso" class="centro">
+            <input 
+                type="range" 
+                name="progresso" 
+                id="progresso"
+                value="2"
+                min="1"
+                max="11"
+                step="1"
+                disabled
+            >
+            <p><span id="numero"></span> de <span id="total"></span></p>
+        </article>
+        <footer>
+            <p>Desenvolvido por Gabriel Carlos Osti Silva &copy; 2023</p>
+        </footer>
+    </main>
+
+<audio preload src="./audios/positive.mp3" id="somAcerto"></audio>
+<audio preload src="./audios/negative.mp3" id="somErrou"></audio>
+<audio preload src="./audios/aplausos.mp3" id="somAplausos"></audio>
+
+<script src="quiz02.js"></script>
+
+</body>
+</html>
