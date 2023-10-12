@@ -174,25 +174,6 @@ function desbloquearAlternativas() {
     alternativas.classList.remove('bloqueado')
 }
 
-function piscarNoAcerto() {
-    articleQuestoes.classList.remove('errou')
-    articleQuestoes.classList.add('acertou')
-}
-
-function piscarNoErro() {
-    articleQuestoes.classList.remove('acertou')
-    articleQuestoes.classList.add('errou')
-}
-
-function tirarPiscar() {
-    articleQuestoes.classList.remove('acertou')
-    articleQuestoes.classList.remove('errou')
-}
-
-function resetarCores() {
-    alternativas.classList.
-}
-
 function verificarSeAcertou(nQuestao, resposta) {
     let numeroDaQuestao = nQuestao.value
     console.log('Questão ' + numeroDaQuestao)
@@ -202,21 +183,16 @@ function verificarSeAcertou(nQuestao, resposta) {
     let certa = questoes[numeroDaQuestao].correta
 
     if(respostaEscolhida == certa) {
-        //piscarNoAcerto()
         somAcerto.play()
         pontos += 10
         if(nQuestao.value == 1 && pontos == 20) {
             pontos = 10
         }
     } else {
-        //piscarNoErro()
         somErrou.play()
     }
 
-    setTimeout(() => {
-        tirarPiscar()
-        resetarCores()
-    }, 150)
+    
 
     placar = pontos
     instrucoes.textContent = 'Pontos ' + placar
