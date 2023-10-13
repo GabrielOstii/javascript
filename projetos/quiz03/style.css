@@ -13,6 +13,15 @@
     font-family: 'Roboto', Helvetica, sans-serif;
 }
 
+:root {
+    --branco: #ffffff;
+    --preto: #000000;
+    --principal: #fff537;
+    --cinzaEscuro: #201e1e;
+    --cinzaMedio: #2a2828;
+    --cinzaClaro: #383535;
+}
+
 body {
     background:
     url(./img/toxic_shrooms_by_antonkurbatov_dfvpx5c\ \(1\).png)  ;
@@ -37,7 +46,7 @@ div#background {
 main {
     width: 50%;
     padding: 25px;
-    background: #201e1e;
+    background: var(--cinzaEscuro);
     border-radius: 20px;
     text-align: center;
     box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.631);
@@ -47,25 +56,48 @@ main {
 h1 {
     padding-bottom: 15px;
     font-size: 30px;
-    color: #ffffff;
+    color: var(--branco);
 }
 
 article#instrucoes {
     margin-bottom: 15px;
     font-size: 15px;
     font-weight: 300;
-    color: white;
+    color: var(--branco);
+}
+
+header#cabecario {
+    margin-bottom: 15px;
 }
 
 article.questao {
-    width: 50%;
-    background: #2a2828;
+    width: 70%;
+    padding: 20px;
+    background: var(--cinzaMedio);
     border-radius: 15px;
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.284);
 }
 
+span#nQuestao {
+    color: var(--preto);
+    font-size: 18px;
+    font-weight: bolder;
+    background: var(--principal);
+    border-radius: 50%;
+    padding: 2px 8px 2px 8px;
+}
+
+h2#pergunta {
+    font-size: 18px;
+    margin-left: 5px;
+    display: inline;
+    color: var(--branco);
+}
+
 li.letras {
-    background: #383535;
+    color: var(--branco);
+    font-weight: bold;
+    background: var(--cinzaClaro);
     padding: 15px;
     margin: 10px;
     border-radius: 10px;
@@ -73,16 +105,28 @@ li.letras {
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.143);
 }
 
+li.letras:hover{
+    background: var(--principal);
+    color: var(--preto);
+    cursor: pointer;
+}
+
 footer#aviso {
     font-weight: bolder;
-    color: #ffffff;
+    color: var(--branco);
+    margin-top: 15px;
 }
 
 footer#dev > p {
     padding-top: 15px;
     font-size: 15px;
     font-weight: 300;
-    color: #ffffff;
+    color: var(--branco);
 }
 
-
+.placar {
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    background: var(--cinzaMedio);
+}

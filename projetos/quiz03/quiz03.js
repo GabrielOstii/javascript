@@ -31,8 +31,8 @@ let somAplausos = document.querySelector('#somAplausos')
 const url = 'data.json'
 
 function pegarDados(i) {
-    fetch(url).then(Response => {
-        return Response.json();
+    fetch(url).then(response => {
+        return response.json();
     }).then(data => {
         if(data.erro) {
             console.log('Erro ao acessar o JSON')
@@ -73,4 +73,63 @@ pegarDados(1)
 function proximaQuestao(numQuestao) {
     let proxima = parseInt(numQuestao)
     pegarDados(proxima)
+}
+
+function verificarSeAcertou(nQuestao, resposta) {
+    let numeroDaQuestao = nQuestao.value
+
+    let repostaEscolhida = resposta.textContent
+
+    pegarDados(numeroDaQuestao)
+
+    let respostaCorrect = correct.value
+
+    if(repostaEscolhida == respostaCorrect) {
+        somAcerto.play()
+        pontos += 10
+    } else {
+        console.log('Errou')
+        somErro.play()
+    }
+
+    quantidadeDeQuestoes = parseInt(total.textContent)
+
+    proxima = parseInt(numero.textContent) + 1
+
+    setTimeout(function() {
+        if (proxima > quantidadeDeQuestoes) {
+            console.log('Fim do Jogo!')
+            fimDoJogo()
+        } else {
+            proximaQuestao(proxima)
+        }
+    }, 50);
+
+    atualizarPlacar()
+
+}
+  
+function atualizarPlacar() {
+    placar.textContent = pontos
+}
+
+function fimDoJogo() {
+    somAplausos.play()
+
+    let s = 's'
+    pontos == 0 ? s = '' : s = s
+    instrucoes.textContent = 'Fim de jogo! Você conseguiu ' + pontos + ' ponto'+ s
+
+    instrucoes.classList.add('placar')
+
+    questao.style.display = 'none'
+
+    setTimeout(function () {
+        pontos = 0
+        instrucoes.classList.remove('placar')
+
+        questao.style.display = 'block'
+        proximaQuestao(1)
+        instrucoes.textContent = 'Leia a questão e depois clique na respota'
+    }, 8000)
 }
