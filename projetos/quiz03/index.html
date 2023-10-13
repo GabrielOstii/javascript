@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz 3.0</title>
+    <link rel="shortcut icon" href="../favicon/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="centro">
+    <div id="background" class="centro">
+        <main>
+            <section class="centro">
+                <h1 id="titulo">App</h1>
+                <article id="instrucoes" class="placar">
+                    Leia a questão e depois clique na respota
+                </article>
+                <article class="questao">
+                    <header class="topoQuestao">
+                        <span id="nQuestao">?</span>
+                        <h2 id="pergunta">???</h2>
+                    </header>
+                    <div class="corpoQuestao">
+                        <ol class="alternativas">
+                            <li id="a" value="1A" class="letras" onclick="verificarSeAcertou(this, this)"></li>
+                            <li id="b" value="1B" class="letras" onclick="verificarSeAcertou(this, this)"></li>
+                            <li id="c" value="1C" class="letras" onclick="verificarSeAcertou(this, this)"></li>
+                            <li id="d" value="1D" class="letras" onclick="verificarSeAcertou(this, this)"></li>
+                        </ol>
+                        <footer class="rodapeQuestao centro"    id="aviso">
+                            <p>
+                                <span id="numero"></span>
+                                de
+                                <span id="total"></span>
+                            </p>
+                        </footer>
+                    </div>
+                </article>
+                <footer id="dev">
+                    <p>Desenvolvido por Gabriel Carlos Osti Silva &copy; 2023</p>
+                </footer>
+            </section>
+        </main>
+    </div>
+
+<audio preload src="./audios/positive.mp3" id="somAcerto"></audio>
+<audio preload src="./audios/negative.mp3" id="somErrou"></audio>
+<audio preload src="./audios/aplausos.mp3" id="somAplausos"></audio>
+
+<input type="hidden" id="correct" name="correct" value="">
+
+<script src="quiz03.js"></script>
+</body>
+</html>
