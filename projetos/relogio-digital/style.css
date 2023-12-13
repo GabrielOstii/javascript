@@ -46,20 +46,21 @@ section {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    
+    text-align: center;
     
     user-select: none;
+
     padding: 1rem;
     border-radius: 20px;
     background: #111;
     color: cyan;
-    text-align: center;
     font-size: 2rem;
 }
 
 #relogioSmart {
     user-select: none;
-    margin-top: 1rem;
+    margin-top: 0.8rem;
+    
 }
 
 #hSmart, #mSmart {
