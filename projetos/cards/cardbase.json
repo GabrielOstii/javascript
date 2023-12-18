@@ -1,0 +1,28 @@
+{
+    "pokemons":[
+        {
+            "namePoke":"Pikachu Uchiha",
+            "nameSkil":"Familicídio",
+            "descSkil":"Tendencia familiar acontece entre 3 a cada 3 membros dos Uchiha.",
+            "img":"pikachu.jpg"
+        },
+        {
+            "namePoke":"Deadchu",
+            "nameSkil":"Morre Nunca",
+            "descSkil":"'Eu não morro carai o pai é pika kkk, quem é vc que ta do outro lado vou te mata em kkk.",
+            "img":"deadpool.jpg"
+        },
+        {
+            "namePoke":"Hokagechu",
+            "nameSkil":"Vou ser Hokage",
+            "descSkil":"Vou ser Hokage, Vou ser Hokage, Vou ser Hokage, Vou ser Hokage.",
+            "img":"hokage.jpg"
+        },
+        {
+            "namePoke":"God of Bone",
+            "nameSkil":"Deusicídio",
+            "descSkil":"Tendencia em matar Deus sem preconceito religioso.",
+            "img":"godofwar.jpg"
+        }
+    ]
+}
