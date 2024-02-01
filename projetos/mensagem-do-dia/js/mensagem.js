@@ -1,7 +1,7 @@
 let citacao00       = document.querySelector('#citacao00')
-let dataCitacao     = document.querySelector('h2')
-let textoCitacao    = document.querySelector('blockquote')
-let autoriaCitacao  = document.querySelector('span')
+let dataCitacao     = citacao00.querySelector('h2')
+let textoCitacao    = citacao00.querySelector('blockquote')
+let autoriaCitacao  = citacao00.querySelector('span')
 
 let aviso = document.querySelector('#aviso')
 let divBaixar = document.querySelector('#divBaixar')
