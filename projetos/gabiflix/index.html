@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./images/netflix.png" type="image/x-icon">
+    <title>GabiFlix - Entreterimento</title>
+</head>
+<body>
+    <main class="tela-principal">
+
+        <header id="topo">
+            <h1>GabiFlix</h1> <span><a href=""><i class="far fa-user-circle"></i></a></span>
+        </header>
+
+        <section>
+            <article id="banner-principal">
+                <iframe width="560" height="315" src="" title="Youtube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </article>
+
+            <h3><i class="fas fa-globe"></i> Musicas (<span class="numDeVideos"></span>)</h3>
+            <article class="categoria">
+                <button id="btnPrev" onclick="show(-1, 1)"> &lt; </button>
+                <ul id="lista1" class="videos">
+                    <li>
+                        <a href="https://www.youtube.com/watch?v=4QU-snw-5xA" rel="noreferrer noopener" target="_blank">
+                            <img class="capa-tumb" src="https://img.youtube.com/vi/4QU-snw-5xA/maxresdefault.jpg" alt="capa">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.youtube.com/watch?v=_7ukuPMF-L4" rel="noreferrer noopener" target="_blank">
+                            <img class="capa-tumb" src="https://img.youtube.com/vi/_7ukuPMF-L4/maxresdefault.jpg" alt="capa">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.youtube.com/watch?v=_AN6UBRCQUU" rel="noreferrer noopener" target="_blank">
+                            <img class="capa-tumb" src="https://img.youtube.com/vi/_AN6UBRCQUU/maxresdefault.jpg" alt="capa">
+                        </a>
+                    </li>
+                </ul>
+                <button id="btnNext" onclick="show(+1, 1)"> &gt; </button>
+            </article>
+        </section>
+
+        <div id="aviso">
+        </div>
+
+        <footer>
+            <p>GabiFlix &copy; Produzido por Gabriel Carlos Osti - 2024</p>
+        </footer>
+    </main>
+<script src="js/gabiflix.js"></script>
+<script src="https://kit.fontawesome.com/9c34151a1a.js" crossorigin="anonymous"></script>
+</body>
+</html>
