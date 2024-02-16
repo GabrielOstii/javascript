@@ -1,0 +1,59 @@
+{
+    "categorias" : [
+        {
+           "id" : 1,
+           "titulo" : "Musicas",
+           "cor": "#004d40"
+        },
+        {
+            "id" : 2,
+            "titulo" : "Geografia",
+            "cor": "#004d40"
+         }
+    ],
+    "videos": [
+        {
+            "id" :1,
+            "categoriaId" :1,
+            "videoId" :"pKa5qh3iuBs",
+            "titulo": "Rodrigo Zin - Darling",
+            "descricao": "Single 'Darling' de Rodrigo Zin Disponível no Spotify: https://open.spotify.com/track/2QPfXa..."
+        },
+        {
+            "id" :2,
+            "categoriaId" :1,
+            "videoId" :"ZT9Xd7AgfiM",
+            "titulo": "Akashi Cruz - Replay",
+            "descricao": "Letra e voz:(@Akashi_Cruz e @wbbeats), Mixagem e masterização:(@duckjhooficiall)"
+        },
+        {
+            "id" :3,
+            "categoriaId" :1,
+            "videoId" :"ozcB_rY94Sw",
+            "titulo": "Slow GM - Tic Tac",
+            "descricao": "Watanabe, eu sei que cê quer ficar comigo até mais tarde"
+        },
+        {
+            "id" :4,
+            "categoriaId" :1,
+            "videoId" :"RfBRDOnukJo",
+            "titulo": "Enygma - Feridas",
+            "descricao": "Escute minhas músicas também nas plataformas digitais! Spotify: https://open.spotify.com/artist/3vQAV..."
+        },
+        {
+            "id" :5,
+            "categoriaId" :1,
+            "videoId" :"kTdnEXc5dXA",
+            "titulo": "Enygma - Mentira em Abril",
+            "descricao": "Escute minhas músicas também nas plataformas digitais! Spotify: https://open.spotify.com/artist/3vQAV..."
+        },
+        {
+            "id" :6,
+            "categoriaId" :1,
+            "videoId" :"kTdnEXc5dXA",
+            "titulo": "Rodrigo Zin - Chainsaw Man",
+            "descricao": "Single 'Chainsaw Man' de Rodrigo Zin Disponível no Spotify: https://open.spotify.com/track/61b2r3..."
+        }
+        
+    ]
+}

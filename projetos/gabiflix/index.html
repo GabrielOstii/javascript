@@ -49,32 +49,12 @@
                 <button id="btnNext" onclick="show(+1, 1)"> &gt; </button>
             </article>
 
-            <h3><i class="fas fa-globe"></i> Musicas (<span class="numDeVideos"></span>)</h3>
 
+            <h3 class="tituloCategoria">Categoria</h3>
             <article class="categoria">
                 <button id="btnPrev" onclick="show(-1, 2)"> &lt; </button>
                 <ul id="lista2" class="videos">
-                    <li>
-                        <img class="capa-thumb" src="https://img.youtube.com/vi/4QU-snw-5xA/maxresdefault.jpg" alt="capa" onclick="abrirModal('4QU-snw-5xA')">
-                    </li>
-                    <li>
-                        <img class="capa-thumb" src="https://img.youtube.com/vi/_7ukuPMF-L4/maxresdefault.jpg" alt="capa" onclick="abrirModal('_7ukuPMF-L4')">
-                    </li>
-                    <li>
-                        <img class="capa-thumb" src="https://img.youtube.com/vi/_AN6UBRCQUU/maxresdefault.jpg" alt="capa" onclick="abrirModal('_AN6UBRCQUU')">
-                    </li>
-                    <li>
-                        <img class="capa-thumb" src="https://img.youtube.com/vi/iUM3YdqwgPg/maxresdefault.jpg" alt="capa" onclick="abrirModal('iUM3YdqwgPg')">
-                    </li>
-                    <li>
-                        <img class="capa-thumb" src="https://img.youtube.com/vi/HHzIzkPhhaE/maxresdefault.jpg" alt="capa" onclick="abrirModal('HHzIzkPhhaE')">
-                    </li>
-                    <li>
-                        <img class="capa-thumb" src="https://img.youtube.com/vi/8NqrwyzoaGw/maxresdefault.jpg" alt="capa" onclick="abrirModal('8NqrwyzoaGw')">
-                    </li>
-                    <li>
-                        <img class="capa-thumb" src="https://img.youtube.com/vi/-QBuXSGQ9fM/maxresdefault.jpg" alt="capa" onclick="abrirModal('-QBuXSGQ9fM')">
-                    </li>
+                    
                 </ul>
                 <button id="btnNext" onclick="show(+1, 2)"> &gt; </button>
             </article>
@@ -85,11 +65,8 @@
         <div id="abrirModal" class="modal">
             <div>
                 <a href="#fechar" title="Fechar" class="fechar">x</a>
-                <iframe id="iframevideo" width="560" height="315" src="https://www.youtube.com/embed/" title="Youtube video player" frameborder="0" allow="accelerrometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe id="iframeVideo" width="560" height="315" src="https://www.youtube.com/embed/" title="Youtube video player" frameborder="0" allow="accelerrometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
-        </div>
-
-        <div id="aviso">
         </div>
 
         <footer id="rodape">
