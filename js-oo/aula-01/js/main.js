@@ -1,4 +1,3 @@
-//import { Pessoa } from './models/Pessoa.js'
 import { PessoaController } from './api/controllers/PessoaController.js'
 
 let pessoaController = new PessoaController()
