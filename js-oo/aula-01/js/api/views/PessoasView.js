@@ -1,11 +1,13 @@
-export class PessoasView {
+import { View } from "./View.js"
+
+export class PessoasView extends View {
 
     constructor(elemento) {
-        this._elemento = elemento
+        super(elemento)
     }
 
     //map e join pesquise
-    _template(model) {
+    template(model) {
         return `
             <table>
                 <thead>
@@ -31,7 +33,10 @@ export class PessoasView {
         `
     }
 
+    /*
+    pegando da classe mãe
     update(model) {
         this._elemento.innerHTML = this._template(model)
     }
+    */
 }
