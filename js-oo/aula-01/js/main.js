@@ -1,18 +1,84 @@
 import { PessoaController } from './api/controllers/PessoaController.js'
+import { ModalHelper } from './api/helpers/ModalHelper.js'
 
-let pessoaController = new PessoaController()
+const pessoaController = new PessoaController()
 
 // CONTROLAR ENVIO DO FORMULARIO E EXIBICAO NA TABELA
 
-let formulario = document.querySelector('form')
+let formulario = document.querySelector('#formulario')
 
 formulario.addEventListener('submit', (event) => {
 
     //adicionar pessoa
     pessoaController.adiciona(event)
 
+    ModalHelper.ocultarBotoes()
+    ModalHelper.modal('Cadastro', 'Pessoa cadastrada ou atualizada!')
+
     pessoaController._limparFormulario()
 })
+
+//formulario formApagar
+const formApagarEditar = document.querySelector('#formApagarEditar')
+const btnApagar = document.querySelector('#btnApagar')
+const btnEditar = document.querySelector('#btnEditar')
+
+formApagarEditar.addEventListener('submit', (event) => {
+    event.preventDefault()
+})
+
+btnApagar.addEventListener('click', () => {
+    let id = document.querySelector('#id').value
+    console.log('Apagar registro ' + id)
+
+    document.querySelector('#id').value = null
+
+    //Interações com a janela modal
+    ModalHelper.mostrarBotoes()
+    //abrir modal
+    ModalHelper.modal('Apagar registro', `Deseja apagar o registro ${id} ?`)
+
+    //botao sim
+    document.querySelector('#sim').addEventListener('click', () => {
+        pessoaController.apaga(id)
+        id = null // Apagar o ID importante
+        ModalHelper.closeModal()
+    })
+})
+
+btnEditar.addEventListener('click', () => {
+    
+    //rolar para cima
+    window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: 'smooth'
+    })
+
+    document.querySelector('#nome').focus()
+
+    let id = document.querySelector('#id').value
+
+    console.log('Editar registro ' + id)
+
+    document.querySelector('#idPessoa').value = id
+    document.querySelector('#id').value = null
+
+    let pessoa = pessoaController.buscaPorId(id)
+
+    if(pessoa) {
+        //desentruturação
+        let { _nome, _idade, _peso, _altura} = pessoa
+
+        pessoaController.preencheFormulario(_nome, _idade, _peso, _altura)
+    }
+})
+
+//Controles do modal
+
+ModalHelper.fecharJanela()
+
+
 
 //Antiga forma
 

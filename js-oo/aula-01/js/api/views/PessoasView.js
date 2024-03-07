@@ -12,22 +12,24 @@ export class PessoasView extends View {
             <table>
                 <thead>
                     <tr>
+                        <th>ID</th>
                         <th>Nome<th/> <th>Idade<th/> <th>Peso<th/> <th>Altura<th/> <th>IMC<th/> <th>Situação<th/>
                     </tr>
                 </thead>
                 <tbody>
-                ${model.pessoas.map(pessoa => {
-                    return `
-                        <tr>
-                            <td>${pessoa.nome}<td/>
-                            <td>${pessoa.idade}<td/>
-                            <td>${pessoa.peso}<td/>
-                            <td>${pessoa.altura}<td/>
-                            <td>${pessoa.imc}<td/>
-                            <td>${pessoa.classificaImc()}<td/>
-                        </tr>
-                    `
-                }).join('')}
+                    ${model.pessoas.map((pessoa, indice) => {
+                        return `
+                            <tr>
+                                <td>${indice}</th>
+                                <td>${pessoa._nome}<td/>
+                                <td>${pessoa._idade}<td/>
+                                <td>${pessoa._peso}<td/>
+                                <td>${pessoa._altura}<td/>
+                                <td>${pessoa._imc}<td/>
+                                <td>${pessoa._classificacao}<td/>
+                            </tr>
+                        `
+                    }).join('')}
                 </tbody>
             </table>
         `

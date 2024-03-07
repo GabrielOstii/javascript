@@ -1,10 +1,18 @@
 export class ListaPessoas {
-    constructor() {
-        this._pessoas = []
+    constructor(lista=[]) {
+        this._pessoas = lista
     }
 
     adiciona(pessoa) {
         this._pessoas.push(pessoa)
+    }
+
+    remove(id) {
+        this._pessoas.splice(id, 1)
+    }
+
+    atualiza(id, pessoaAtualizada) {
+        this._pessoas[id] = pessoaAtualizada
     }
 
     //Utilizaremos programação defensiva para retornar uma copia do array como segurança
